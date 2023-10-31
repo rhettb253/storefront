@@ -1,0 +1,66 @@
+[
+  {
+    "image_url": "https://via.placeholder.com/150?text=Apple",
+    "title": "Red Apple",
+    "description": "A delicious and juicy red apple",
+    "keyword": "apple",
+    "type": "fruit",
+    "fruit_type": "red"
+  },
+  {
+    "image_url": "https://via.placeholder.com/150?text=Banana",
+    "title": "Yellow Banana",
+    "description": "A ripe and sweet yellow banana",
+    "keyword": "banana",
+    "type": "fruit",
+    "fruit_type": "yellow"
+  },
+  {
+    "image_url": "https://via.placeholder.com/150?text=Orange",
+    "title": "Fresh Orange",
+    "description": "A vibrant and tangy orange fruit",
+    "keyword": "orange",
+    "type": "fruit",
+    "fruit_type": "orange"
+  },
+  {
+    "image_url": "https://via.placeholder.com/150?text=Grapes",
+    "title": "Gratifying Grapes",
+    "description": "A cluster of delicious and plump grapes",
+    "keyword": "grapes",
+    "type": "fruit",
+    "fruit_type": "purple"
+  },
+  {
+    "image_url": "https://via.placeholder.com/150?text=Carrot",
+    "title": "Fresh Carrot",
+    "description": "A crunchy and healthy orange carrot",
+    "keyword": "carrot",
+    "type": "vegetable",
+    "vegetable_type": "orange"
+  },
+  {
+    "image_url": "https://via.placeholder.com/150?text=Broccoli",
+    "title": "Green Broccoli",
+    "description": "Nutritious and fresh green broccoli",
+    "keyword": "broccoli",
+    "type": "vegetable",
+    "vegetable_type": "green"
+  },
+  {
+    "image_url": "https://via.placeholder.com/150?text=Tomato",
+    "title": "Ripe Tomato",
+    "description": "A ripe and juicy red tomato",
+    "keyword": "tomato",
+    "type": "vegetable",
+    "vegetable_type": "red"
+  },
+  {
+    "image_url": "https://via.placeholder.com/150?text=Cucumber",
+    "title": "Fresh Cucumber",
+    "description": "A fresh and crispy green cucumber",
+    "keyword": "cucumber",
+    "type": "vegetable",
+    "vegetable_type": "green"
+  }
+]
