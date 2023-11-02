@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
+import { addToCart } from "../../store/cart";
 import { toggleShow, selectedItem } from "../../store/selectedItem";
 import { Card, CardHeader, CardMedia, CardContent, Typography } from "@mui/material";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
@@ -24,6 +25,10 @@ function Products() {
     dispatch(selectedItem(item));
   }
 
+  const addCartClick = (e, item) => {
+    dispatch(addToCart(item));
+  }
+
   return (
     <ul>
       {renderedProduce.map((item, idx) => (
@@ -43,7 +48,12 @@ function Products() {
               {item.description}
             </Typography>
           </CardContent>
-          <AddShoppingCartIcon className="addcart"/>
+          <div className="cardBottom">
+          <Typography variant="header3" color="text.secondary">
+              {'$' + item.price}
+            </Typography>
+            <AddShoppingCartIcon className="addcart" onClick={(e) => addCartClick(e, item)} />
+          </div>
         </Card>
       ))}
     </ul>

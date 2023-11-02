@@ -33,3 +33,11 @@ svg:hover {
     background-color: whitesmoke;
     cursor: pointer;
 }
+
+.cardModal {
+    width: 20rem;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    margin-left: -10rem;
+}
