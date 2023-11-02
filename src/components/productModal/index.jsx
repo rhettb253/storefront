@@ -20,11 +20,11 @@ function ProductModal() {
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-      <Card>
+      <Card className="cardModal">
         <CardContent>
           <Typography id="modal-modal-title" variant="h6" component="h2">
             <div className="modalTop">
-              {selected?.title} <AddShoppingCartIcon className="addcart"/>
+              {selected?.title}
             </div>
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
@@ -37,6 +37,12 @@ function ProductModal() {
             alt={selected?.title}
           />
         </CardContent>
+        <div className="cardBottom">
+          <Typography variant="header3" color="text.secondary">
+              {'$' + selected?.price}
+            </Typography>
+            <AddShoppingCartIcon className="addcart"/>
+          </div>
       </Card>
     </Modal>
   );
