@@ -53,7 +53,12 @@ npm run dev
 This command starts the development server and launches the application in your browser. You can view it at http://localhost:3000.
 
 ## Credits
-The banner image by Elaine Casap on unsplash.
+
+- The banner image by Elaine Casap on unsplash.
+
+- Red apple photo by Tobi on Unsplash
+  
 
 ## License
+
 This project is licensed under the MIT - see the LICENSE.md file for details.
