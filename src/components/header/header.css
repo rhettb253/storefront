@@ -20,7 +20,13 @@ h1 {
     margin: 0;
 }
 
-svg.cart {
+h3 {
+    color: rgb(140, 193, 67);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: underline;
+}
+
+.cart {
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -29,7 +35,7 @@ svg.cart {
     border-radius: 1rem;
 }
 
-svg:hover {
+.cart:hover {
     background-color: whitesmoke;
     cursor: pointer;
 }
@@ -40,4 +46,12 @@ svg:hover {
     top: 25%;
     left: 50%;
     margin-left: -10rem;
+}
+
+.popover {
+    padding: 1rem 2rem;
+    border-color: rgb(245, 106, 51);
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
 }

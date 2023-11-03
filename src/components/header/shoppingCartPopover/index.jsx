@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { Popover } from "@mui/material";
+import { Button, Popover } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { close } from "../../../store/cart";
 import { useEffect } from "react";
@@ -7,6 +7,7 @@ import { useEffect } from "react";
 function CartPopover() {
   const open = useSelector((state) => state.cart.open);
   const cart = useSelector((state) => state.cart.cart);
+  const totalCost = useSelector((state) => state.cart.totalCost);
   const dispatch = useDispatch();
   const anchorEl = document.getElementById("anchor");
 
@@ -14,22 +15,7 @@ function CartPopover() {
     dispatch(close());
   };
 
-  let cartInfo = useEffect(() => {
-    renderCartProperties();
-  })
-
-  const renderCartProperties = () => {
-    if (cart.totalCost === 0) return 'Your Cart Is Empty'
-    return Object.entries(cart).map(([key, value]) => (
-      <div key={key}>
-        <p>
-          <strong>{key}:</strong> {value}
-        </p>
-      </div>
-    ));
-  };
-
-  console.log(cart);
+  console.log(Object.entries(cart));
 
   return (
     <Popover
@@ -45,7 +31,22 @@ function CartPopover() {
         horizontal: "right",
       }}
     >
-      <p>{cartInfo}</p>
+      <div className="popover">
+        <h3> Your Cart </h3>
+        {Object.keys(cart).length === 0 ? <p>Your Cart Is Empty!</p> : 
+          Object.entries(cart).map(([key, value]) => (
+                <div key={key} style={{display:'flex', justifyContent:'space-evenly', gap:'2rem'}}>
+                  <p> <strong>{key}</strong> </p>
+                  <p> {'quanitity: ' + value.amount} </p>
+                  <p> {'price: $' + value.cost} </p>
+                </div>
+              ))}
+              <hr />
+              <p style={{textAlign:'right'}}> <strong>Total: </strong> {'$'+ totalCost} </p>
+              <Button variant={totalCost === 0 ? 'disabled' : 'contained'}>
+                Continue to Checkout
+              </Button>
+      </div>
     </Popover>
   );
 }

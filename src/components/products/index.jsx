@@ -32,18 +32,20 @@ function Products() {
   return (
     <ul>
       {renderedProduce.map((item, idx) => (
-        <Card key={idx} onClick={(e) => handleItemClick(e, item)}>
+        <Card key={idx} >
           <CardHeader
             title={item.title}
             subheader={item.type}
+            onClick={(e) => handleItemClick(e, item)}
           />
           <CardMedia
             component="img"
             height="194"
             image={item.image_url}
             alt={item.title}
+            onClick={(e) => handleItemClick(e, item)}
           />
-          <CardContent>
+          <CardContent onClick={(e) => handleItemClick(e, item)}>
             <Typography variant="body2" color="text.secondary">
               {item.description}
             </Typography>
@@ -51,7 +53,7 @@ function Products() {
           <div className="cardBottom">
           <Typography variant="header3" color="text.secondary">
               {'$' + item.price}
-            </Typography>
+          </Typography>
             <AddShoppingCartIcon className="addcart" onClick={(e) => addCartClick(e, item)} />
           </div>
         </Card>
