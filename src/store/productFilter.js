@@ -1,10 +1,19 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import produceData from '../data.json';
+
+const url = import.meta.env.VITE_API_URL;
+
+
+export const getProducts = createAsyncThunk('getProducts', async () => {
+  const res = await fetch(`${url}/products`);
+  const objProducts = await res.json();
+  return objProducts.results;
+});
 
 const initialState = {
   produce: produceData,
   type: 'ALL',
-}
+};
 
 export const productFilterSlice = createSlice({
   name: 'filter',
@@ -20,6 +29,11 @@ export const productFilterSlice = createSlice({
       state.type = 'VEGETABLES'
     },
   },
+  extraReducers: (builder) => {
+    builder.addCase(getProducts.fulfilled, (state, action) => {
+      state.products = action.payload;
+    });
+  }
 })
 
 // Action creators are generated for each case reducer function
