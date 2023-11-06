@@ -4,6 +4,10 @@
 
 This project is an online store application built using Vite for the front-end and Redux Toolkit for state management. It provides users with the ability to browse various product categories, view products within selected categories, and shop in an intuitive, user-friendly interface.
 
+## Thunk Branch
+
+Switching to this branch changes the website's products and looses functionality but it shows how to use thunk with redux to asynchronously recieve and update the products.
+
 ## User Stories
 
 The application satisfies the following user/developer stories:
