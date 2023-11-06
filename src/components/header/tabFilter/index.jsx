@@ -29,8 +29,8 @@ function TabFilter() {
       aria-label="scrollable auto tabs"
     >
       <Tab label="ALL" />
-      <Tab label="FRUITS" />
-      <Tab label="VEGETABLES" />
+      {/* <Tab label="FRUITS" />
+      <Tab label="VEGETABLES" /> */}
     </Tabs>
   )
 }

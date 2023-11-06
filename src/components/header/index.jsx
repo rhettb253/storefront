@@ -14,8 +14,8 @@ function Header() {
 
   return (
     <header>
-      <img src="../../src/assets/tomatoes.jpg" alt="fresh picked tomatoes"/>
-      <h1>The Producers</h1>
+      <img src="../../src/assets/products.jpg" alt="products"/>
+      <h1>The Producters</h1>
       <ShoppingCartIcon id='anchor' className='cart' onClick={openCart} />
       <TabFilter />
       <CartPopover />

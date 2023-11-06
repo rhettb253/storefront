@@ -1,5 +1,9 @@
 # Online Store Application using Vite with Redux Toolkit
 
+## Thunk Branch
+
+This branch uses Redux thunk to get live data from a database. This removes other functionality from the dev branch to illustrate how to use createAsyncThunk.
+
 ## Overview
 
 This project is an online store application built using Vite for the front-end and Redux Toolkit for state management. It provides users with the ability to browse various product categories, view products within selected categories, and shop in an intuitive, user-friendly interface.

@@ -7,10 +7,11 @@ const url = import.meta.env.VITE_API_URL;
 export const getProducts = createAsyncThunk('getProducts', async () => {
   const res = await fetch(`${url}/products`);
   const objProducts = await res.json();
-  return objProducts.results;
+  return objProducts.results; // this will be action.payload in extraReducer func
 });
 
 const initialState = {
+  products: [],
   produce: produceData,
   type: 'ALL',
 };
@@ -32,7 +33,7 @@ export const productFilterSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(getProducts.fulfilled, (state, action) => {
       state.products = action.payload;
-    });
+    })
   }
 })
 
