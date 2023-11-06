@@ -17,14 +17,14 @@ export const cartSlice = createSlice({
       state.open = false;
     },
     addToCart: (state, action) => {
-        const { keyword, price } = action.payload;
-        if (state.cart[keyword]) {
-            state.cart[keyword] = {
-                amount: state.cart[keyword].amount + 1,
-                cost: state.cart[keyword].cost + price,
+        const { name, price } = action.payload;
+        if (state.cart[name]) {
+            state.cart[name] = {
+                amount: state.cart[name].amount + 1,
+                cost: state.cart[name].cost + price,
             };
         } else {
-            state.cart[keyword] = {
+            state.cart[name] = {
                 amount: 1,
                 cost: price,
             };

@@ -4,13 +4,13 @@ import { addToCart } from "../../store/cart";
 import { toggleShow, selectedItem } from "../../store/selectedItem";
 import { Card, CardHeader, CardMedia, CardContent, Typography } from "@mui/material";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import { getProducts } from "../../store/productFilter";
+import { getProducts, updateProduct } from "../../store/productFilter";
 
 function Products() {
   const dispatch = useDispatch();
-  const produce = useSelector((state) => state.filter.produce);
-  const type = useSelector((state) => state.filter.type);
-  const [renderedProduce, setRenderedProduce ] = useState(produce);
+  // const produce = useSelector((state) => state.filter.produce);
+  // const type = useSelector((state) => state.filter.type);
+  // const [renderedProduce, setRenderedProduce ] = useState(produce);
   const products = useSelector(state => state.filter.products)
 
   useEffect(() => {
@@ -30,6 +30,7 @@ function Products() {
 
   const addCartClick = (e, item) => {
     dispatch(addToCart(item));
+    dispatch(updateProduct({ product: item, amount: -1 }));
   }
 
   return (

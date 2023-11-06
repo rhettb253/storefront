@@ -2,7 +2,7 @@
 
 ## Thunk Branch
 
-This branch uses Redux thunk to get live data from a database. This removes other functionality from the dev branch to illustrate how to use createAsyncThunk.
+This branch uses Redux thunk to get live data from a database. This removes other functionality from the main and dev branches to illustrate how to use createAsyncThunk.
 
 ## Overview
 
