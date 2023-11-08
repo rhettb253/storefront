@@ -1,0 +1,47 @@
+div.cartContents{
+    margin: 0 15%;
+}
+
+div.creditCard{
+    margin: 0 20%;
+}
+
+div.form{
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    width: 50%;
+}
+
+form input{
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 0.5rem;
+}
+
+img.checkoutBanner{
+    height: 10rem;
+}
+
+img.checkoutList{
+    width: auto;
+    height: 4rem;
+}
+
+button.goBack{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.5rem 1rem;
+}

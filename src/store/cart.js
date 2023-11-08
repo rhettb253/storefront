@@ -17,16 +17,18 @@ export const cartSlice = createSlice({
       state.open = false;
     },
     addToCart: (state, action) => {
-        const { keyword, price } = action.payload;
+        const { keyword, price, image_url } = action.payload;
         if (state.cart[keyword]) {
             state.cart[keyword] = {
                 amount: state.cart[keyword].amount + 1,
                 cost: state.cart[keyword].cost + price,
+                img: image_url
             };
         } else {
             state.cart[keyword] = {
                 amount: 1,
                 cost: price,
+                img: image_url
             };
         }
         state.totalCost += price;

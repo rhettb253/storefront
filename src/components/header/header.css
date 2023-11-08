@@ -55,3 +55,8 @@ h3 {
     display: flex;
     flex-direction: column;
 }
+
+button a{
+    color: whitesmoke;
+    text-decoration: none;
+}
