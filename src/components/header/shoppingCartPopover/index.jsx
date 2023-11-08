@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { Button, Popover } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { close } from "../../../store/cart";
-import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function CartPopover() {
   const open = useSelector((state) => state.cart.open);
@@ -14,8 +14,6 @@ function CartPopover() {
   const closeCart = () => {
     dispatch(close());
   };
-
-  console.log(Object.entries(cart));
 
   return (
     <Popover
@@ -43,8 +41,8 @@ function CartPopover() {
               ))}
               <hr />
               <p style={{textAlign:'right'}}> <strong>Total: </strong> {'$'+ totalCost} </p>
-              <Button variant={totalCost === 0 ? 'disabled' : 'contained'}>
-                Continue to Checkout
+              <Button variant={totalCost === 0 ? 'disabled' : 'contained'} >
+                <Link to="/checkout">Continue to Checkout</Link>
               </Button>
       </div>
     </Popover>

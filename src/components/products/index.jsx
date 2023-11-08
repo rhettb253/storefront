@@ -18,7 +18,7 @@ function Products() {
     } else if (type === 'VEGETABLES') {
       setRenderedProduce(produce.filter(item => item.type === 'vegetable'))
     } else if (type === 'ALL') setRenderedProduce(produce);
-  }, [type]);
+  }, [type, produce]);
 
   const handleItemClick = (e, item) => {
     dispatch(toggleShow()); 
@@ -26,6 +26,10 @@ function Products() {
   }
 
   const addCartClick = (e, item) => {
+    e.target.style.backgroundColor = 'rgb(140, 193, 67)';
+    setTimeout(()=> {
+      e.target.style.backgroundColor = 'rgba(245, 245, 245, 0.686)';
+    }, 250);
     dispatch(addToCart(item));
   }
 
